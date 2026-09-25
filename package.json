@@ -1,23 +1,17 @@
 {
-  "name": "vida-site",
+  "name": "metodo-prospera",
   "version": "1.0.0",
   "private": true,
-  "description": "Site institucional premium + blog com área restrita",
+  "description": "Site Método Prospera — Carol Pessoa",
   "main": "server.js",
   "scripts": {
-    "start": "node --disable-warning=ExperimentalWarning server.js",
-    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
-    "build:pages": "node --disable-warning=ExperimentalWarning scripts/build-static.js"
+    "start": "node server.js",
+    "build:pages": "node scripts/build-static.js"
   },
   "engines": {
-    "node": ">=22.5"
+    "node": ">=18"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "express": "^4.22.3",
-    "express-rate-limit": "^8.7.0",
-    "helmet": "^8.3.0",
-    "multer": "^2.4.0",
-    "sanitize-html": "^2.17.7"
+    "express": "^4.22.3"
   }
 }

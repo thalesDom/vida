@@ -1,546 +1,321 @@
 <!doctype html>
-<html lang="pt-BR" data-static data-base="/vida/" class="is-loading">
+<html lang="pt-BR" class="is-loading">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vida — Inteligência comercial para laboratórios</title>
-<meta name="description" content="Plataforma de inteligência comercial para laboratórios: cockpit gerencial, gestão de prescritores, CRM com rota otimizada, IA e BI avançado.">
-<meta property="og:title" content="Vida — Inteligência comercial para laboratórios">
-<meta property="og:description" content="Relacionamento, recorrência e mais pedidos médicos. Seu laboratório presente onde as decisões acontecem.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="/vida/img/og.png">
-<meta name="theme-color" content="#064e3b">
-<link rel="icon" href="/vida/img/favicon.svg" type="image/svg+xml">
+<title>Método Prospera — Carol Pessoa | Consultoria estratégica para negócios da saúde</title>
+<meta name="description" content="Consultoria estratégica para clínicas, laboratórios e negócios da saúde. Método. Clareza. Resultado.">
+<meta name="theme-color" content="#2f3b2b">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/vida/css/style.css?v=muhbivi4">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="prospera/prospera.css">
 </head>
 <body>
 
-<!-- ============ PRELOADER ============ -->
-<div class="preloader" id="preloader" aria-hidden="true">
-  <div class="preloader__curtain preloader__curtain--a"></div>
-  <div class="preloader__curtain preloader__curtain--b"></div>
-  <div class="preloader__inner">
-    <svg class="preloader__logo" viewBox="0 0 80 80">
-      <rect class="pl-box" x="4" y="4" width="72" height="72" rx="22"/>
-      <path class="pl-line" d="M22 52l12-14 10 8 14-20"/>
-      <circle class="pl-dot" cx="58" cy="26" r="5"/>
+<!-- Preloader -->
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre__in">
+    <svg class="pre__mono" viewBox="0 0 120 120">
+      <circle class="pre__ring" cx="60" cy="60" r="56"/>
+      <text x="60" y="74" text-anchor="middle" class="pre__cp">CP</text>
     </svg>
-    <div class="preloader__brand"><b>Vida</b></div>
-    <div class="preloader__bar"><span id="preloaderBar"></span></div>
-    <div class="preloader__meta"><span>Carregando inteligência</span><span id="preloaderPct">0%</span></div>
+    <span class="pre__label">Método Prospera</span>
+    <span class="pre__bar"><i id="preBar"></i></span>
   </div>
 </div>
 
-<div class="progress" id="progress"></div>
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-<!-- ============ NAV ============ -->
+<!-- Navegação -->
 <header class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="/vida/" class="brand" aria-label="Vida — início">
-      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#047857"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M11 26l6-7 5 4 7-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="13" r="2.6" fill="#bef264"/></svg>
-      <span><b>Vida</b></span>
+  <div class="wrap nav__in">
+    <a href="#inicio" class="brand" aria-label="Carol Pessoa — início">
+      <span class="brand__mono">CP</span>
+      <span class="brand__txt">Carol Pessoa<small>Estratégia Clínica &amp; Resultado</small></span>
     </a>
     <nav class="nav__links" id="navLinks" aria-label="Principal">
-      <a href="#features">Funcionalidades</a>
-      <a href="#how">Como funciona</a>
-      <a href="#reviews">Depoimentos</a>
-      <a href="/vida/blog">Blog</a>
-      <a href="#contato">Contato</a>
-      <a href="/vida/admin" class="btn btn--primary btn--sm nav__cta-mobile">Acessar painel</a>
+      <a href="#desafio">O desafio</a>
+      <a href="#metodo">O método</a>
+      <a href="#jornada">A jornada</a>
+      <a href="#investimento">Investimento</a>
+      <a href="#contato" class="btn btn--gold nav__mcta">Quero participar</a>
     </nav>
-    <div class="nav__actions">
-      <a href="/vida/admin" class="btn btn--primary btn--sm magnetic">Acessar painel <span aria-hidden="true">→</span></a>
-      <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
-    </div>
+    <a href="#contato" class="btn btn--gold btn--sm nav__cta">Quero participar</a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
 
 <main>
-<!-- ============ HERO ============ -->
-<section class="hero" id="top">
-  <div class="hero__bg" aria-hidden="true">
-    <div class="hero__grid"></div>
-    <div class="orb orb--1"></div><div class="orb orb--2"></div><div class="orb orb--3"></div>
-  </div>
-  <div class="container hero__inner">
+<!-- ================= ABERTURA ================= -->
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true"><span class="hero__glow"></span><span class="hero__glow hero__glow--2"></span></div>
+  <div class="wrap hero__grid">
     <div class="hero__copy">
-      <span class="pill hero-in" style="--d:0"><span class="pill__dot"></span>Plataforma nº 1 para laboratórios</span>
+      <p class="eyebrow in" style="--i:0"><span class="eyebrow__line"></span>Carol Pessoa · Estratégia Clínica &amp; Resultado</p>
       <h1 class="hero__title">
-        <span class="line"><span class="hero-in" style="--d:1">Visitação <em class="grad">Médica</em></span></span>
-        <span class="line"><span class="hero-in" style="--d:2">e B2B que gera</span></span>
-        <span class="line"><span class="hero-in" style="--d:3"><em class="underline">resultado</em></span></span>
+        <span class="mask"><span class="in" style="--i:1">Método</span></span>
+        <span class="mask"><span class="in hero__title-em" style="--i:2">Prospera</span></span>
       </h1>
-      <p class="hero__sub hero-in" style="--d:4">Relacionamento, recorrência e mais pedidos médicos. Seu laboratório presente onde as decisões acontecem.</p>
-      <div class="hero__ctas hero-in" style="--d:5">
-        <a href="#contato" class="btn btn--primary btn--lg magnetic">Agendar demonstração <span aria-hidden="true">→</span></a>
-        <a href="/vida/admin" class="btn btn--ghost btn--lg">Acessar painel</a>
+      <p class="hero__lead in" style="--i:3">Consultoria estratégica para <strong>negócios da saúde.</strong></p>
+      <p class="hero__tag in" style="--i:3">Método. <span>Clareza.</span> Resultado.</p>
+      <div class="hero__ctas in" style="--i:4">
+        <a href="#contato" class="btn btn--gold btn--lg magnetic">Quero participar
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#metodo" class="link-arrow">Conhecer o método <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
-      <ul class="hero__checks hero-in" style="--d:6">
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Sem custo de implantação</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Dados 100% seus</li>
-        <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Suporte via WhatsApp</li>
+      <ul class="hero__proof in" style="--i:5">
+        <li><strong data-count="20">0</strong><span>anos administrando<br>empresa da área</span></li>
+        <li><strong data-count="22">0</strong><span>horas de desenvolvimento<br>estratégico</span></li>
+        <li><strong>ISO</strong><span>certificação<br>ISO</span></li>
       </ul>
     </div>
 
-    <!-- Mockup do cockpit -->
-    <div class="hero__visual hero-in" style="--d:3" id="heroVisual">
-      <div class="mock" data-depth="0.6">
-        <div class="mock__bar">
-          <span class="mock__dots"><i></i><i></i><i></i></span>
-          <span class="mock__url"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>vida · cockpit</span>
-        </div>
-        <div class="mock__body">
-          <div class="mock__kpis">
-            <div class="kpi"><span>Faturamento</span><strong>R$ <b data-count="482" data-suffix="k">0</b></strong><em class="up">▲ 18,4%</em></div>
-            <div class="kpi"><span>Ticket médio</span><strong>R$ <b data-count="312">0</b></strong><em class="up">▲ 6,2%</em></div>
-            <div class="kpi"><span>Cobertura</span><strong><b data-count="87">0</b>%</strong><em class="up">▲ 4,1%</em></div>
-          </div>
-          <div class="mock__chart">
-            <div class="mock__chart-head"><span>Tendência de Receita — 12 meses</span><span class="tag">+32% a.a.</span></div>
-            <svg viewBox="0 0 400 150" preserveAspectRatio="none" class="chart">
-              <defs>
-                <linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#10b981" stop-opacity=".45"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></linearGradient>
-              </defs>
-              <g class="chart__grid"><line x1="0" y1="30" x2="400" y2="30"/><line x1="0" y1="70" x2="400" y2="70"/><line x1="0" y1="110" x2="400" y2="110"/></g>
-              <path class="chart__area" d="M0 120 C30 112 50 116 70 104 S110 96 135 92 S175 70 200 76 S245 58 270 52 S320 44 340 34 S380 22 400 16 L400 150 L0 150Z" fill="url(#area)"/>
-              <path class="chart__line" d="M0 120 C30 112 50 116 70 104 S110 96 135 92 S175 70 200 76 S245 58 270 52 S320 44 340 34 S380 22 400 16"/>
-              <path class="chart__proj" d="M270 52 S320 44 340 34 S380 22 400 16"/>
-              <circle class="chart__pt" cx="400" cy="16" r="5"/>
-            </svg>
-            <div class="mock__months"><span>Out</span><span>Dez</span><span>Fev</span><span>Abr</span><span>Jun</span><span>Ago</span></div>
-          </div>
-          <div class="mock__alert">
-            <span class="mock__alert-ico">!</span>
-            <div><strong>Alerta:</strong> Dr. Henrique (Cat. A) caiu 32% — agendar visita</div>
-            <button type="button" tabindex="-1">Agendar</button>
-          </div>
-        </div>
+    <div class="hero__visual">
+      <div class="arch reveal-img">
+        <img src="prospera/img/carol-hero.jpg" alt="Carol Pessoa, criadora do Método Prospera" width="853" height="1280">
       </div>
-
-      <div class="float float--a" data-depth="1.4">
-        <span class="float__ico">★</span>
-        <div><small>Ranking de oportunidade</small><strong>Dra. Luiza · 94 pts</strong></div>
-      </div>
-      <div class="float float--b" data-depth="1.1">
-        <div class="ring"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15"/><circle class="ring__val" cx="18" cy="18" r="15"/></svg><span>73%</span></div>
-        <div><small>Meta de visitas</small><strong>146 / 200</strong></div>
-      </div>
-      <div class="float float--c" data-depth="1.8">
-        <span class="float__ico float__ico--pin">⌖</span>
-        <div><small>Check-in realizado</small><strong>Rota 3 · 8 médicos</strong></div>
-      </div>
+      <span class="arch__frame" aria-hidden="true"></span>
     </div>
   </div>
-
-  <a href="#benefits" class="scroll-hint" aria-label="Rolar para baixo"><span></span></a>
+  <a href="#desafio" class="scroll-cue" aria-label="Rolar para a próxima seção"><span></span></a>
 </section>
 
-<!-- ============ MARQUEE ============ -->
-<section class="marquee" id="benefits" aria-label="Benefícios">
-  <div class="marquee__track">
-    <div class="marquee__group">
-      <span>✦ Sem custo de implantação</span><span>✦ Dados 100% seus</span><span>✦ Suporte via WhatsApp</span><span>✦ Atualização automática</span><span>✦ Multi laboratório</span><span>✦ Export BI avançado</span>
+<!-- ================= O DESAFIO ================= -->
+<section class="sec sec--dark" id="desafio">
+  <div class="sec__texture" aria-hidden="true"></div>
+  <div class="wrap challenge">
+    <div class="challenge__media">
+      <div class="frame reveal-img">
+        <img src="prospera/img/carol-final.jpg" alt="Carol Pessoa em seu escritório" width="853" height="1280" loading="lazy">
+      </div>
+      <div class="stamp rv">
+        <strong>+20</strong>
+        <span>anos administrando<br>empresa da área</span>
+      </div>
     </div>
-    <div class="marquee__group" aria-hidden="true">
-      <span>✦ Sem custo de implantação</span><span>✦ Dados 100% seus</span><span>✦ Suporte via WhatsApp</span><span>✦ Atualização automática</span><span>✦ Multi laboratório</span><span>✦ Export BI avançado</span>
+
+    <div class="challenge__copy">
+      <p class="eyebrow eyebrow--light rv"><span class="eyebrow__line"></span>O desafio</p>
+      <h2 class="h2 h2--light rv">Você não precisa carregar <em>sozinho</em> o crescimento da sua empresa.</h2>
+      <p class="lead lead--light rv">Quando a estrutura ganha clareza, o crescimento passa a seguir uma direção mais consistente.</p>
+
+      <ul class="pains">
+        <li class="pain rv"><span class="pain__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0116 0"/></svg></span><span class="pain__txt">Sobrecarga da liderança</span><span class="pain__n">01</span></li>
+        <li class="pain rv"><span class="pain__ico"><svg viewBox="0 0 24 24"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span><span class="pain__txt">Processos desalinhados</span><span class="pain__n">02</span></li>
+        <li class="pain rv"><span class="pain__ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><span class="pain__txt">Equipe sem direção</span><span class="pain__n">03</span></li>
+        <li class="pain rv"><span class="pain__ico"><svg viewBox="0 0 24 24"><path d="M5 20V12M10 20V7M15 20v-5M20 20V4"/></svg></span><span class="pain__txt">Decisões sem indicadores</span><span class="pain__n">04</span></li>
+        <li class="pain rv"><span class="pain__ico"><svg viewBox="0 0 24 24"><path d="M3 6l7 7 4-4 7 7"/><path d="M15 16h6v-6"/></svg></span><span class="pain__txt">Resultados abaixo do potencial</span><span class="pain__n">05</span></li>
+      </ul>
+
+      <a href="#metodo" class="btn btn--line rv">Conhecer o Método Prospera
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ============ STATS ============ -->
-<section class="stats">
-  <div class="container">
-    <div class="stats__panel reveal">
-      <div class="stats__glow" aria-hidden="true"></div>
-      <div class="stat">
-        <span class="stat__ico"><svg viewBox="0 0 24 24"><path d="M9 3h6M10 3v6L4.5 18.5A1.7 1.7 0 006 21h12a1.7 1.7 0 001.5-2.5L14 9V3"/><path d="M7 15h10"/></svg></span>
-        <strong><span data-count="500">0</span><em>+</em></strong>
-        <p>Laboratórios ativos</p>
-      </div>
-      <div class="stat">
-        <span class="stat__ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0114 0"/><path d="M17 11l2 2 4-4"/></svg></span>
-        <strong><span data-count="10000">0</span><em>+</em></strong>
-        <p>Médicos gerenciados</p>
-      </div>
-      <div class="stat">
-        <span class="stat__ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
-        <strong><em>R$</em><span data-count="50">0</span><em>M+</em></strong>
-        <p>Faturamento monitorado</p>
-      </div>
-      <div class="stat">
-        <span class="stat__ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></span>
-        <strong><span data-count="73">0</span><em>%</em></strong>
-        <p>Taxa média de conversão</p>
-      </div>
+<!-- ================= LABORATÓRIO REAL ================= -->
+<section class="sec sec--cream" id="autoridade">
+  <div class="wrap authority">
+    <div class="authority__copy">
+      <p class="eyebrow rv"><span class="eyebrow__line"></span>Ciência · Gestão · Resultados · Pessoas</p>
+      <h2 class="h2 rv">Esse método nasceu dentro de um <em>laboratório real.</em></h2>
+      <p class="kicker rv">Da prática, para um futuro<br>mais extraordinário.</p>
+      <blockquote class="quote rv">Experiência aplicada, visão estratégica e base sólida para uma evolução mais consistente.</blockquote>
+    </div>
+    <ul class="creds">
+      <li class="cred rv"><span class="cred__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><p><strong>Mais de 20 anos</strong> administrando empresa da área.</p></li>
+      <li class="cred rv"><span class="cred__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v7.5a2 2 0 01-.2.9L4.7 20.6a1 1 0 00.9 1.4h12.8a1 1 0 00.9-1.4l-5.1-10.2a2 2 0 01-.2-.9V2M8.5 2h7M7 16h10"/></svg></span><p><strong>Laboratório</strong> referência.</p></li>
+      <li class="cred rv"><span class="cred__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-3 5 3-1.5-7"/></svg></span><p><strong>Certificação</strong> ISO.</p></li>
+      <li class="cred rv"><span class="cred__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><p><strong>Milhares de pacientes</strong> atendidos.</p></li>
+      <li class="cred rv"><span class="cred__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5M22 9v6"/></svg></span><p><strong>Doutorado</strong> em Farmacologia.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= PILARES ================= -->
+<section class="sec sec--dark" id="pilares">
+  <div class="sec__texture" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow eyebrow--light rv"><span class="eyebrow__line"></span>Estrutura · Direção · Resultados sustentáveis</p>
+      <h2 class="h2 h2--light rv">Estratégia para transformar <em>clínicas e laboratórios.</em></h2>
+    </header>
+    <ul class="pillars">
+      <li class="pillar rv"><span class="pillar__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><h3>Cultura</h3></li>
+      <li class="pillar rv"><span class="pillar__ico pillar__ico--sage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0111-5.7"/><path d="M18 14l1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2-1.6-1.5L17 16z"/></svg></span><h3>Liderança</h3></li>
+      <li class="pillar rv"><span class="pillar__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Gestão</h3></li>
+      <li class="pillar rv"><span class="pillar__ico pillar__ico--sage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 16v-3M10 16v-6M14 16v-4M18 16V8"/><path d="M5 10l5-5 4 3 6-5"/></svg></span><h3>Indicadores</h3></li>
+      <li class="pillar rv"><span class="pillar__ico pillar__ico--sage"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.4-.9-1.5-1.5-2.8-1.5-1.7 0-2.8.9-2.8 2.1 0 2.8 5.8 1.4 5.8 4.3 0 1.2-1.2 2.2-3 2.2-1.4 0-2.6-.6-3-1.6M12 6v1.7M12 16.3V18"/></svg></span><h3>Vendas</h3></li>
+      <li class="pillar rv"><span class="pillar__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h3l7 5V5L6 10z"/><path d="M17 8a5 5 0 010 8"/></svg></span><h3>Marketing</h3></li>
+      <li class="pillar rv"><span class="pillar__ico pillar__ico--sage"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3L7 9l5 12 5-12-2-6"/></svg></span><h3>Branding</h3></li>
+      <li class="pillar rv"><span class="pillar__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-9-9a4.5 4.5 0 019-2 4.5 4.5 0 019 2c-2 4.5-9 9-9 9z"/></svg></span><h3>Encantamento do cliente</h3></li>
+    </ul>
+    <p class="closing closing--light rv">Cada frente é estruturada para fortalecer a base do negócio e favorecer <em>avanços mais bem direcionados.</em></p>
+  </div>
+</section>
+
+<!-- ================= MÉTODO ================= -->
+<section class="sec sec--paper" id="metodo">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow rv"><span class="eyebrow__line"></span>O método</p>
+      <h2 class="h2 rv">Método <em>Prospera</em></h2>
+      <p class="lead rv">Uma jornada estratégica para clínicas e laboratórios.</p>
+    </header>
+    <ol class="modules">
+      <li class="module rv"><span class="module__n">01</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><h3>Diagnóstico Situacional</h3></li>
+      <li class="module rv"><span class="module__n">02</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><h3>Cultura Organizacional</h3></li>
+      <li class="module rv"><span class="module__n">03</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="8" r="4"/><path d="M3 21a7 7 0 0111-5.7"/><path d="M18 14l1 2 2.2.3-1.6 1.5.4 2.2-2-1-2 1 .4-2.2-1.6-1.5L17 16z"/></svg></span><h3>Desenvolvimento de Liderança</h3></li>
+      <li class="module rv"><span class="module__n">04</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span><h3>Gestão Estratégica</h3></li>
+      <li class="module rv"><span class="module__n">05</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 16v-3M10 16v-6M14 16v-4M18 16V8"/><path d="M5 10l5-5 4 3 6-5"/></svg></span><h3>Indicadores de Desempenho</h3></li>
+      <li class="module rv"><span class="module__n">06</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.8 9.2c-.4-.9-1.5-1.5-2.8-1.5-1.7 0-2.8.9-2.8 2.1 0 2.8 5.8 1.4 5.8 4.3 0 1.2-1.2 2.2-3 2.2-1.4 0-2.6-.6-3-1.6M12 6v1.7M12 16.3V18"/></svg></span><h3>Vendas</h3></li>
+      <li class="module rv"><span class="module__n">07</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10v4h3l7 5V5L6 10z"/><path d="M17 8a5 5 0 010 8"/></svg></span><h3>Marketing &amp; Branding</h3></li>
+      <li class="module rv"><span class="module__n">08</span><span class="module__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-9-9a4.5 4.5 0 019-2 4.5 4.5 0 019 2c-2 4.5-9 9-9 9z"/></svg></span><h3>Encantamento do Cliente</h3></li>
+    </ol>
+    <div class="hours rv"><strong><span data-count="22">0</span> horas</strong> de desenvolvimento estratégico</div>
+    <p class="closing rv">Um percurso pensado para organizar a empresa, fortalecer sua base e sustentar uma evolução coerente.</p>
+  </div>
+</section>
+
+<!-- ================= PARA QUEM ================= -->
+<section class="sec sec--dark" id="publico">
+  <div class="sec__texture" aria-hidden="true"></div>
+  <div class="wrap audience">
+    <header class="audience__head">
+      <p class="eyebrow eyebrow--light rv"><span class="eyebrow__line"></span>Para quem é</p>
+      <h2 class="h2 h2--light rv">Para quem deseja <em>crescer</em> com estratégia.</h2>
+      <p class="lead lead--light rv">Para quem deseja conduzir a empresa com mais clareza, estrutura e intenção.</p>
+      <a href="#contato" class="btn btn--gold rv">Quero participar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </header>
+    <ul class="who">
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2v2M5 2v2M5 3H4a2 2 0 00-2 2v4a6 6 0 0012 0V5a2 2 0 00-2-2h-1M8 15a6 6 0 0012 0v-3"/><circle cx="20" cy="10" r="2"/></svg></span>Clínicas</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v4M14 8h-4M14 14h-4M14 18h-4M18 12h2a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2v-9a2 2 0 012-2h2M18 22V4a2 2 0 00-2-2H8a2 2 0 00-2 2v18"/></svg></span>Hospitais</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2M9 14h6M12 11v6"/></svg></span>Consultórios</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="19" r="2.5"/><circle cx="19" cy="19" r="2.5"/><path d="M10.9 7.3L6.2 16.7M13.1 7.3l4.7 9.4M7.5 19h9"/></svg></span>Redes de saúde</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2v7.5a2 2 0 01-.2.9L4.7 20.6a1 1 0 00.9 1.4h12.8a1 1 0 00.9-1.4l-5.1-10.2a2 2 0 01-.2-.9V2M8.5 2h7M7 16h10"/></svg></span>Laboratórios</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2M22 13a18 18 0 01-20 0M12 12h.01"/></svg></span>Gestores</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M5.5 10h3l1.5-3 2.5 6 1.5-3h4.5"/></svg></span>Centros de diagnóstico</li>
+      <li class="who__item rv"><span class="who__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 006 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></svg></span>Empreendedores da saúde</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= JORNADA ================= -->
+<section class="sec sec--cream" id="jornada">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow rv"><span class="eyebrow__line"></span>A jornada</p>
+      <h2 class="h2 rv">Da realidade atual ao <em>crescimento estratégico.</em></h2>
+    </header>
+    <ol class="timeline" id="timeline">
+      <li class="step rv"><span class="step__n">01</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span><h3>Diagnosticar</h3><p>Compreender</p></li>
+      <li class="step rv"><span class="step__n">02</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></svg></span><h3>Estruturar</h3><p>Organizar</p></li>
+      <li class="step rv"><span class="step__n">03</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><h3>Desenvolver</h3><p>Preparar</p></li>
+      <li class="step rv"><span class="step__n">04</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Posicionar</h3><p>Fortalecer</p></li>
+      <li class="step rv"><span class="step__n">05</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M10 20V7M15 20v-5M20 20V4"/></svg></span><h3>Acompanhar</h3><p>Mensurar</p></li>
+      <li class="step rv"><span class="step__n">06</span><span class="step__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M6 16v-3M10 16v-6M14 16v-4M18 16V8"/><path d="M5 10l5-5 4 3 6-5"/></svg></span><h3>Crescer</h3><p>Prosperar</p></li>
+    </ol>
+    <p class="closing rv">Cada etapa prepara a próxima, tornando o avanço mais consciente, sólido e alinhado ao que a empresa deseja construir.</p>
+  </div>
+</section>
+
+<!-- ================= EXPERIÊNCIA ================= -->
+<section class="sec sec--dark" id="experiencia">
+  <div class="sec__texture" aria-hidden="true"></div>
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="eyebrow eyebrow--light rv"><span class="eyebrow__line"></span>Como funciona</p>
+      <h2 class="h2 h2--light rv">Uma experiência de <em>desenvolvimento estratégico.</em></h2>
+    </header>
+    <ul class="exp">
+      <li class="exp__card rv"><span class="exp__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><h3><span data-count="3" data-pad="2">0</span> meses</h3><p>Jornada estratégica para transformar sua empresa.</p></li>
+      <li class="exp__card rv"><span class="exp__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><h3><span data-count="22">0</span> horas</h3><p>Desenvolvimento com foco em gestão, liderança e resultados.</p></li>
+      <li class="exp__card rv"><span class="exp__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20a6 6 0 0112 0M14.5 14.5A5 5 0 0121 19"/></svg></span><h3>Encontros semanais</h3><p>Acompanhamento contínuo para gerar evolução real.</p></li>
+      <li class="exp__card rv"><span class="exp__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span><h3>Presencial</h3><p>Interação, troca e conexão para avanços consistentes.</p></li>
+    </ul>
+    <p class="motto rv">Estratégia. <em>Execução.</em> Acompanhamento.</p>
+    <p class="closing closing--light rv">Uma construção contínua para favorecer decisões mais seguras e movimentos mais alinhados ao propósito da empresa.</p>
+  </div>
+</section>
+
+<!-- ================= CRESCER COM DIREÇÃO ================= -->
+<section class="sec sec--paper" id="direcao">
+  <div class="wrap direction">
+    <div class="direction__copy">
+      <p class="eyebrow rv"><span class="eyebrow__line"></span>Estratégia que transforma</p>
+      <h2 class="h2 rv">Crescer com <em>direção.</em></h2>
+      <p class="lead rv">Mais do que avançar, a proposta é construir uma <strong>evolução firme, consciente e conectada</strong> ao que a empresa deseja alcançar.</p>
+      <ul class="gains">
+        <li class="gain rv"><span class="gain__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 006 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5M9 18h6M10 22h4"/></svg></span>Clareza na gestão.</li>
+        <li class="gain rv"><span class="gain__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/></svg></span>Processos mais bem organizados.</li>
+        <li class="gain rv"><span class="gain__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>Decisões mais seguras.</li>
+        <li class="gain rv"><span class="gain__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12M10 20V7M15 20v-5M20 20V4"/></svg></span>Avanços sustentáveis.</li>
+        <li class="gain rv"><span class="gain__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></span>Crescimento coerente com os objetivos da empresa.</li>
+      </ul>
+    </div>
+    <div class="stairs" id="stairs" aria-label="Planejamento, Estrutura, Evolução, Resultados, Propósito">
+      <span class="stairs__leaf" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21V11"/><path d="M12 13c-4 0-7-2.5-7-7 4 0 7 2.5 7 7zM12 11c0-4 3-7 7-7 0 4.5-3 7-7 7z"/></svg></span>
+      <div class="stair" style="--w:52%;--i:4">Propósito</div>
+      <div class="stair" style="--w:64%;--i:3">Resultados</div>
+      <div class="stair" style="--w:76%;--i:2">Evolução</div>
+      <div class="stair" style="--w:88%;--i:1">Estrutura</div>
+      <div class="stair" style="--w:100%;--i:0">Planejamento</div>
+    </div>
+  </div>
+  <p class="wrap signature rv"><span></span><em>Estratégia hoje, um futuro mais sólido amanhã.</em><span></span></p>
+</section>
+
+<!-- ================= INVESTIMENTO ================= -->
+<section class="sec sec--dark" id="investimento">
+  <div class="sec__texture" aria-hidden="true"></div>
+  <div class="wrap offer">
+    <div class="offer__copy">
+      <p class="eyebrow eyebrow--light rv"><span class="eyebrow__line"></span>Investimento</p>
+      <h2 class="h2 h2--light rv">O próximo nível do seu negócio exige uma <em>decisão.</em></h2>
+      <p class="lead lead--light rv">O crescimento consistente não acontece por acaso. Ele é favorecido por <em class="gold-i">método, clareza e direção.</em></p>
+      <p class="tiny rv">Negócios mais fortes · Mulheres mais livres</p>
+    </div>
+    <div class="price rv">
+      <p class="price__kicker">Método</p>
+      <p class="price__title">Prospera</p>
+      <span class="price__rule"></span>
+      <div class="price__row"><span class="price__ico price__ico--sage"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><p><strong>03 meses</strong> de consultoria estratégica</p></div>
+      <div class="price__row price__row--hl"><span class="price__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h4"/></svg></span><p><small>4x de</small><span class="price__value">R$ 995<sup>,00</sup></span><small>no cartão</small></p></div>
+      <div class="price__row"><span class="price__ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3L7 9l5 12 5-12-2-6"/></svg></span><p><small>À vista</small><span class="price__value">R$ 3.497<sup>,00</sup></span></p></div>
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Carol!%20Quero%20garantir%20minha%20vaga%20no%20M%C3%A9todo%20Prospera." target="_blank" rel="noopener" class="btn btn--gold btn--block">Quero garantir minha vaga <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- ============ FEATURES ============ -->
-<section class="section" id="features">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow reveal">Funcionalidades</span>
-      <h2 class="reveal">Tudo que seu laboratório <em class="grad">precisa</em></h2>
-      <p class="reveal">Uma plataforma completa para transformar dados de visitas em crescimento comercial real.</p>
+<!-- ================= FECHAMENTO ================= -->
+<section class="sec sec--cream final" id="contato">
+  <div class="wrap final__grid">
+    <div class="final__media">
+      <div class="arch arch--sm reveal-img"><img src="prospera/img/carol-hero.jpg" alt="Carol Pessoa" width="853" height="1280" loading="lazy"></div>
+      <span class="arch__frame arch__frame--sm" aria-hidden="true"></span>
     </div>
-    <div class="features">
-      <article class="feature reveal">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="16" width="7" height="5" rx="2"/></svg></div>
-        <h3>Cockpit Gerencial</h3>
-        <p>Dashboard dividido em 3 camadas: Status, Análise e Alertas de ação. Decisão em segundos.</p>
-        <span class="feature__num">01</span>
-      </article>
-      <article class="feature reveal" style="--rd:.08s">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0114 0"/><path d="M17 11l2 2 4-4"/></svg></div>
-        <h3>Gestão de Prescritores</h3>
-        <p>Feed de médicos com categorias A, B e C, indicadores de saúde, perfil completo e linha do tempo.</p>
-        <span class="feature__num">02</span>
-      </article>
-      <article class="feature reveal" style="--rd:.16s">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0114 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-        <h3>CRM & Rota Otimizada</h3>
-        <p>Alertas automáticos de churn, rota com Google Maps, check-in rápido e compartilhamento por WhatsApp.</p>
-        <span class="feature__num">03</span>
-      </article>
-      <article class="feature reveal">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg></div>
-        <h3>Inteligência Artificial</h3>
-        <p>Previsão de receita por regressão linear, detector de anomalias de ticket médio e ranking de oportunidades.</p>
-        <span class="feature__num">04</span>
-      </article>
-      <article class="feature reveal" style="--rd:.08s">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-        <h3>BI & Análises Avançadas</h3>
-        <p>LTV e Churn por prescritor, heatmap de especialidades, simulador de viabilidade e export Excel com fórmulas.</p>
-        <span class="feature__num">05</span>
-      </article>
-      <article class="feature reveal" style="--rd:.16s">
-        <div class="feature__ico"><svg viewBox="0 0 24 24"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M4 15v4a2 2 0 002 2h12a2 2 0 002-2v-4"/></svg></div>
-        <h3>Importação Inteligente</h3>
-        <p>Drag & drop de planilhas Excel. O sistema classifica e processa automaticamente todo o histórico.</p>
-        <span class="feature__num">06</span>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ============ SHOWCASE (abas) ============ -->
-<section class="section section--mint" id="dashboard">
-  <div class="container showcase">
-    <div class="showcase__copy">
-      <span class="eyebrow reveal">A plataforma</span>
-      <h2 class="reveal">Um cockpit completo, <em class="grad">na palma da mão</em></h2>
-      <p class="reveal">Do gestor ao representante, cada perfil vê exatamente o que precisa para agir — com dados atualizados automaticamente.</p>
-      <div class="tabs reveal" role="tablist" aria-label="Módulos">
-        <button class="tab is-active" role="tab" aria-selected="true" aria-controls="pane-0" id="tab-0">
-          <strong>Painel de Inteligência</strong><span>KPIs, tendência e alertas de churn em tempo real.</span><i class="tab__bar"></i>
-        </button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-1" id="tab-1">
-          <strong>Prescritores & Curva ABC</strong><span>Carteira por categoria e representatividade no faturamento.</span><i class="tab__bar"></i>
-        </button>
-        <button class="tab" role="tab" aria-selected="false" aria-controls="pane-2" id="tab-2">
-          <strong>Simulador de Viabilidade</strong><span>Projete a receita com aumento de visitas.</span><i class="tab__bar"></i>
-        </button>
-      </div>
-    </div>
-
-    <div class="showcase__screen reveal">
-      <div class="screen">
-        <div class="pane is-active" id="pane-0" role="tabpanel" aria-labelledby="tab-0">
-          <div class="pane__head"><strong>Performance de Meta x Visitas</strong><span class="tag">2026</span></div>
-          <div class="bars">
-            <div style="--h:62%"><i style="--h2:48%"></i><span>Jan</span></div>
-            <div style="--h:70%"><i style="--h2:61%"></i><span>Fev</span></div>
-            <div style="--h:66%"><i style="--h2:64%"></i><span>Mar</span></div>
-            <div style="--h:78%"><i style="--h2:72%"></i><span>Abr</span></div>
-            <div style="--h:80%"><i style="--h2:83%"></i><span>Mai</span></div>
-            <div style="--h:86%"><i style="--h2:79%"></i><span>Jun</span></div>
-            <div style="--h:90%"><i style="--h2:92%"></i><span>Jul</span></div>
-            <div style="--h:94%"><i style="--h2:97%"></i><span>Ago</span></div>
-          </div>
-          <div class="legend"><span><i class="lg-a"></i>Meta</span><span><i class="lg-b"></i>Visitas realizadas</span></div>
-          <div class="churn-list">
-            <div><span class="avatar-s">RC</span><p><strong>Dr. Rafael Costa</strong><small>Cardiologia · Cat. A</small></p><em class="down">−28%</em></div>
-            <div><span class="avatar-s">AM</span><p><strong>Dra. Ana Moura</strong><small>Ginecologia · Cat. B</small></p><em class="down">−19%</em></div>
-          </div>
-        </div>
-
-        <div class="pane" id="pane-1" role="tabpanel" aria-labelledby="tab-1" hidden>
-          <div class="pane__head"><strong>Curva ABC — representatividade</strong><span class="tag">Período atual</span></div>
-          <div class="abc">
-            <div class="abc__row"><span class="abc__cat a">A</span><div class="abc__track"><i style="--w:72%"></i></div><b>72%</b></div>
-            <div class="abc__row"><span class="abc__cat b">B</span><div class="abc__track"><i style="--w:21%"></i></div><b>21%</b></div>
-            <div class="abc__row"><span class="abc__cat c">C</span><div class="abc__track"><i style="--w:7%"></i></div><b>7%</b></div>
-          </div>
-          <div class="table">
-            <div class="table__h"><span>Médico</span><span>Especialidade</span><span>LTV</span></div>
-            <div><span>Dra. Luiza Prado</span><span>Endocrinologia</span><span>R$ 84,2k</span></div>
-            <div><span>Dr. Marcos Lima</span><span>Clínica geral</span><span>R$ 61,7k</span></div>
-            <div><span>Dra. Paula Reis</span><span>Pediatria</span><span>R$ 47,9k</span></div>
-            <div><span>Dr. Tiago Alves</span><span>Urologia</span><span>R$ 39,3k</span></div>
-          </div>
-        </div>
-
-        <div class="pane" id="pane-2" role="tabpanel" aria-labelledby="tab-2" hidden>
-          <div class="pane__head"><strong>Simulador de Viabilidade</strong><span class="tag">Interativo</span></div>
-          <label class="sim__label" for="simRange">Aumento de visitas: <b id="simPct">25%</b></label>
-          <input type="range" id="simRange" min="0" max="100" value="25" step="5">
-          <div class="sim__cards">
-            <div><small>Cenário atual</small><strong id="simBase">R$ 482.000</strong></div>
-            <div class="is-hl"><small>Ganho projetado</small><strong id="simGain">+R$ 84.350</strong></div>
-          </div>
-          <p class="sim__note">Projeção baseada no ticket médio por visita da sua carteira.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW ============ -->
-<section class="section" id="how">
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow reveal">Como funciona</span>
-      <h2 class="reveal">Simples, rápido e <em class="grad">poderoso</em></h2>
-      <p class="reveal">Em três passos, sua equipe sai da planilha para decisões guiadas por dados.</p>
-    </div>
-    <div class="steps" id="steps">
-      <div class="steps__line" aria-hidden="true"><i></i></div>
-      <div class="step reveal">
-        <div class="step__num">1</div>
-        <h3>Importe sua planilha</h3>
-        <p>Faça upload da base de visitas médicas. O sistema processa e organiza automaticamente.</p>
-      </div>
-      <div class="step reveal" style="--rd:.15s">
-        <div class="step__num">2</div>
-        <h3>A IA gera os alertas</h3>
-        <p>Detecta churn, crescimento, anomalias e prioriza ações por urgência em tempo real.</p>
-      </div>
-      <div class="step reveal" style="--rd:.3s">
-        <div class="step__num">3</div>
-        <h3>Aja com precisão</h3>
-        <p>Abra a rota no Maps, compartilhe via WhatsApp e marque check-ins diretamente no sistema.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ REVIEWS ============ -->
-<section class="section section--dark" id="reviews">
-  <div class="section--dark__bg" aria-hidden="true"></div>
-  <div class="container">
-    <div class="section__head">
-      <span class="eyebrow eyebrow--light reveal">Depoimentos</span>
-      <h2 class="reveal">Quem já usa, <em class="grad-light">recomenda</em></h2>
-      <div class="rating-sum reveal" id="ratingSum" hidden>
-        <span class="rating-sum__stars" aria-hidden="true"><i id="ratingFill"></i></span>
-        <strong id="ratingAvg">5,0</strong>
-        <span>de 5 · <b id="ratingTotal">3</b> avaliações verificadas</span>
-      </div>
-    </div>
-    <div class="reviews" id="reviewsGrid">
-      <figure class="review reveal">
-        <div class="stars" aria-label="5 estrelas">★★★★★</div>
-        <blockquote>“O CRM com rota otimizada reduziu o tempo de planejamento da nossa equipe de campo em 60%. Os alertas de churn salvaram contratos importantes.”</blockquote>
-        <figcaption><span class="avatar">CE</span><div><strong>Carlos Eduardo</strong><span>Gestor Comercial · Lab. São Lucas</span></div></figcaption>
-      </figure>
-      <figure class="review review--hl reveal" style="--rd:.1s">
-        <div class="stars" aria-label="5 estrelas">★★★★★</div>
-        <blockquote>“O cockpit de inteligência da IA é surpreendente. Identifica padrões que levariam semanas para ver manualmente. Indispensável.”</blockquote>
-        <figcaption><span class="avatar">MF</span><div><strong>Mariana Fontes</strong><span>Diretora de Operações · Lab. Central Plus</span></div></figcaption>
-      </figure>
-      <figure class="review reveal" style="--rd:.2s">
-        <div class="stars" aria-label="5 estrelas">★★★★★</div>
-        <blockquote>“O check-in rápido e o compartilhamento de rota por WhatsApp tornaram meu dia a dia muito mais ágil. Recomendo.”</blockquote>
-        <figcaption><span class="avatar">RM</span><div><strong>Roberto Meira</strong><span>Representante Técnico · Lab. Vida</span></div></figcaption>
-      </figure>
-    </div>
-
-    <div class="review-cta reveal">
-      <div class="review-cta__avatars" aria-hidden="true"><span>CE</span><span>MF</span><span>RM</span><span class="plus">+</span></div>
-      <div class="review-cta__txt">
-        <strong>Você também usa a Vida?</strong>
-        <p>Conte como a plataforma ajudou o seu laboratório. Leva menos de 1 minuto.</p>
-      </div>
-      <button type="button" class="btn btn--light btn--lg magnetic" id="openReview" aria-haspopup="dialog">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg>
-        Deixar meu depoimento
-      </button>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MODAL DE DEPOIMENTO ============ -->
-<div class="rmodal" id="reviewModal" role="dialog" aria-modal="true" aria-labelledby="rmTitle" hidden>
-  <div class="rmodal__scrim" data-close></div>
-  <div class="rmodal__box" tabindex="-1">
-    <button type="button" class="rmodal__close" data-close aria-label="Fechar">
-      <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
-    </button>
-
-    <form class="rmodal__form" id="reviewForm" novalidate>
-      <div class="rmodal__head">
-        <span class="rmodal__badge"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/></svg></span>
-        <h3 id="rmTitle">Deixe seu depoimento</h3>
-        <p>Sua opinião ajuda outros laboratórios a decidir. Ela será publicada após uma rápida revisão da nossa equipe.</p>
-      </div>
-
-      <fieldset class="rate">
-        <legend>Qual nota você dá para a Vida?</legend>
-        <div class="rate__stars" id="rateStars">
-          <input type="radio" name="rating" id="r5" value="5"><label for="r5" title="Excelente"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></label>
-          <input type="radio" name="rating" id="r4" value="4"><label for="r4" title="Muito bom"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></label>
-          <input type="radio" name="rating" id="r3" value="3"><label for="r3" title="Bom"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></label>
-          <input type="radio" name="rating" id="r2" value="2"><label for="r2" title="Regular"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></label>
-          <input type="radio" name="rating" id="r1" value="1"><label for="r1" title="Ruim"><svg viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></label>
-        </div>
-        <span class="rate__label" id="rateLabel">Toque nas estrelas</span>
-      </fieldset>
-
-      <div class="rfield-row">
-        <label class="rfield"><span>Seu nome*</span><input name="name" maxlength="80" autocomplete="name" required></label>
-        <label class="rfield"><span>E-mail* <small>(não será publicado)</small></span><input name="email" type="email" maxlength="160" autocomplete="email" required></label>
-      </div>
-      <div class="rfield-row">
-        <label class="rfield"><span>Cargo</span><input name="role" maxlength="80" placeholder="Ex.: Gestor Comercial" autocomplete="organization-title"></label>
-        <label class="rfield"><span>Laboratório</span><input name="company" maxlength="100" placeholder="Ex.: Lab. São Lucas" autocomplete="organization"></label>
-      </div>
-      <label class="rfield"><span>Seu depoimento*</span>
-        <textarea name="text" rows="4" maxlength="600" placeholder="Como a Vida ajudou seu laboratório? Conte um resultado concreto." required></textarea>
-        <em class="rfield__count" id="rCount">0/600</em>
-      </label>
-      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <label class="rcheck"><input type="checkbox" name="consent" required><span>Autorizo a publicação do meu nome, cargo e depoimento no site, conforme a <a href="/vida/privacidade" target="_blank">Política de Privacidade</a>.</span></label>
-
-      <p class="rmodal__err" role="alert" hidden></p>
-      <button type="submit" class="btn btn--primary btn--lg btn--block"><span class="btn__label">Enviar depoimento</span><span class="spinner" aria-hidden="true"></span></button>
-    </form>
-
-    <div class="rmodal__ok" hidden>
-      <div class="ok-check"><svg viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg></div>
-      <h3>Obrigado pelo depoimento!</h3>
-      <p>Recebemos sua avaliação. Ela aparecerá no site assim que for revisada pela nossa equipe.</p>
-      <button type="button" class="btn btn--primary" data-close>Fechar</button>
-    </div>
-  </div>
-</div>
-
-<!-- ============ BLOG PREVIEW ============ -->
-<section class="section" id="blog">
-  <div class="container">
-    <div class="section__head section__head--split">
-      <div>
-        <span class="eyebrow reveal">Blog</span>
-        <h2 class="reveal">Conteúdo para quem vive de <em class="grad">resultado</em></h2>
-      </div>
-      <a href="/vida/blog" class="btn btn--ghost reveal">Ver todos os artigos <span aria-hidden="true">→</span></a>
-    </div>
-    <div class="post-grid" id="blogPreview">
-      <div class="post-skel"></div><div class="post-skel"></div><div class="post-skel"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FAQ ============ -->
-<section class="section section--mint" id="faq">
-  <div class="container faq">
-    <div class="faq__intro">
-      <span class="eyebrow reveal">Dúvidas</span>
-      <h2 class="reveal">Perguntas <em class="grad">frequentes</em></h2>
-      <p class="reveal">Não encontrou o que procura? Fale com nosso time pelo WhatsApp — respondemos rápido.</p>
-      <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn btn--primary reveal">Falar no WhatsApp</a>
-    </div>
-    <div class="accordion">
-      <details class="acc reveal" open>
-        <summary>Existe custo de implantação?<i></i></summary>
-        <div class="acc__body"><p>Não. A implantação é gratuita: você envia suas planilhas e nossa equipe ajuda na configuração inicial do cockpit.</p></div>
-      </details>
-      <details class="acc reveal">
-        <summary>Meus dados ficam seguros?<i></i></summary>
-        <div class="acc__body"><p>Sim. Os dados são 100% do seu laboratório, com acesso controlado por perfis (proprietário, gestor, representante e visualizador).</p></div>
-      </details>
-      <details class="acc reveal">
-        <summary>Consigo usar com mais de um laboratório?<i></i></summary>
-        <div class="acc__body"><p>Sim. A plataforma é multi laboratório: cada unidade tem seus próprios usuários, carteiras e indicadores.</p></div>
-      </details>
-      <details class="acc reveal">
-        <summary>Preciso mudar minha planilha atual?<i></i></summary>
-        <div class="acc__body"><p>Não. A importação inteligente detecta automaticamente o formato (visitas, status ou faturamento) e organiza todo o histórico.</p></div>
-      </details>
-      <details class="acc reveal">
-        <summary>Como funciona o suporte?<i></i></summary>
-        <div class="acc__body"><p>Suporte direto pelo WhatsApp com o nosso time, além de tutoriais e acompanhamento na implantação.</p></div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTATO ============ -->
-<section class="cta" id="contato">
-  <div class="container">
-    <div class="cta__box cta__box--split">
-      <div class="cta__glow" aria-hidden="true"></div>
-      <div class="cta__copy">
-        <span class="eyebrow eyebrow--light reveal">Vamos conversar</span>
-        <h2 class="reveal">Tome <em class="grad-light">decisões baseadas</em> em dados hoje</h2>
-        <p class="reveal">Agende uma demonstração gratuita e veja o cockpit funcionando com os dados do seu laboratório.</p>
-        <ul class="cta__list reveal">
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Demonstração personalizada de 30 min</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Implantação sem custo</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg>Resposta em até 1 dia útil</li>
-        </ul>
-      </div>
-      <form class="form reveal" id="contactForm" novalidate>
-        <div class="form__row">
-          <label class="field"><input name="name" required placeholder=" " autocomplete="name"><span>Nome*</span></label>
-          <label class="field"><input name="company" placeholder=" " autocomplete="organization"><span>Laboratório</span></label>
-        </div>
-        <div class="form__row">
-          <label class="field"><input name="email" type="email" required placeholder=" " autocomplete="email"><span>E-mail*</span></label>
-          <label class="field"><input name="phone" type="tel" placeholder=" " autocomplete="tel" data-mask="phone"><span>WhatsApp</span></label>
-        </div>
-        <label class="field"><textarea name="message" rows="3" placeholder=" "></textarea><span>Como podemos ajudar?</span></label>
-        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn btn--light btn--lg btn--block" type="submit"><span class="btn__label">Quero uma demonstração</span><span class="spinner" aria-hidden="true"></span></button>
-        <p class="form__consent">Ao enviar, você concorda com a nossa <a href="/vida/privacidade">Política de Privacidade</a>. Seus dados são usados apenas para retornarmos o contato.</p>
-        <p class="form__msg" role="status" aria-live="polite"></p>
-      </form>
+    <div class="final__copy">
+      <p class="final__brand rv"><span class="brand__mono">CP</span><span>Estratégia Clínica<br>&amp; Resultado</span></p>
+      <p class="final__kicker rv">Método <em>Prospera</em></p>
+      <h2 class="h2 rv">Sua empresa já possui <em>potencial.</em> Agora precisa de direção para transformar esforço em <em>evolução consistente.</em></h2>
+      <p class="hero__tag rv">Método. <span>Clareza.</span> Resultado.</p>
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20Carol!%20Quero%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Prospera." target="_blank" rel="noopener" class="btn btn--gold btn--lg rv magnetic">Falar com a Carol <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
   </div>
 </section>
 </main>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer" id="footer">
-  <div class="container">
-    <div class="footer__grid">
-      <div class="footer__brand">
-        <a href="/vida/" class="brand brand--light"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M11 26l6-7 5 4 7-10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="29" cy="13" r="2.6" fill="#bef264"/></svg><span><b>Vida</b></span></a>
-        <p>Inteligência comercial para laboratórios. Visitação médica e B2B que gera resultado.</p>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 10v7"/></svg></a>
-          <a href="https://wa.me/5500000000000" aria-label="WhatsApp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4.1-1.1z"/><path d="M9 9.5c.3 1.8 1.7 3.9 4.5 5l1.2-1.2 1.8.8-.4 1.6c-3 .4-7.4-3-7.6-6.6L10 7.8l1 1.6z" fill="currentColor" stroke="none"/></svg></a>
-        </div>
-      </div>
-      <div><h4>Produto</h4><a href="#features">Funcionalidades</a><a href="#how">Como funciona</a><a href="#dashboard">Plataforma</a></div>
-      <div><h4>Empresa</h4><a href="#reviews">Depoimentos</a><a href="/vida/blog">Blog</a><a href="#contato">Parceiros</a></div>
-      <div><h4>Suporte</h4><a href="https://wa.me/5500000000000" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:contato@vida.com.br">contato@vida.com.br</a><a href="#faq">Perguntas frequentes</a></div>
-    </div>
-    <div class="footer__bottom">
-      <span>© <span id="year">2026</span> Vida. Todos os direitos reservados.</span>
-      <span class="footer__legal"><a href="/vida/privacidade">Privacidade</a><a href="/vida/termos">Termos</a><a href="#" data-cookie-prefs>Cookies</a><a href="/vida/admin" class="footer__admin"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>Área restrita</a></span>
-    </div>
+<footer class="foot">
+  <div class="wrap foot__in">
+    <a href="#inicio" class="brand brand--light"><span class="brand__mono">CP</span><span class="brand__txt">Carol Pessoa<small>Estratégia Clínica &amp; Resultado</small></span></a>
+    <nav class="foot__nav" aria-label="Rodapé"><a href="#desafio">O desafio</a><a href="#metodo">O método</a><a href="#jornada">A jornada</a><a href="#investimento">Investimento</a><a href="#contato">Contato</a></nav>
+    <p class="foot__copy">© <span id="year">2026</span> Carol Pessoa · Método Prospera. Todos os direitos reservados.</p>
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4.1-1.1z"/><path d="M9 9.5c.3 1.8 1.7 3.9 4.5 5l1.2-1.2 1.8.8-.4 1.6c-3 .4-7.4-3-7.6-6.6L10 7.8l1 1.6z" fill="currentColor" stroke="none"/></svg></a>
-<button class="to-top" id="toTop" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
 
-<script src="/vida/js/main.js?v=muhbtz85" defer></script>
+
+<a class="wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M4 20l1.3-3.9A8 8 0 1112 20a8 8 0 01-4.1-1.1z"/><path d="M9 9.5c.3 1.8 1.7 3.9 4.5 5l1.2-1.2 1.8.8-.4 1.6c-3 .4-7.4-3-7.6-6.6L10 7.8l1 1.6z" fill="currentColor" stroke="none"/></svg>
+</a>
+
+<script src="prospera/prospera.js" defer></script>
 </body>
 </html>

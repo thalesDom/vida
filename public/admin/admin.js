@@ -1,4 +1,4 @@
-/* SD Vendas — Painel administrativo (SPA com rotas por hash) */
+/* Vida — Painel administrativo (SPA com rotas por hash) */
 (() => {
   'use strict';
   const $ = (s, c = document) => c.querySelector(s);
@@ -113,7 +113,7 @@
     <div class="login">
       <aside class="login__side">
         <div class="login__orb"></div>
-        <a href="/" class="brand">${LOGO}<span>SD<b>Vendas</b></span></a>
+        <a href="/" class="brand">${LOGO}<span><b>Vida</b></span></a>
         <div>
           <h1>Seu conteúdo, <em>sua autoridade</em> no mercado.</h1>
           <p>Publique artigos, gerencie categorias, imagens e contatos recebidos pelo site — tudo em um só lugar.</p>
@@ -126,7 +126,7 @@
       </aside>
       <main class="login__main">
         <form class="login__card" id="loginForm" novalidate>
-          <a href="/" class="brand brand--dark">${LOGO}<span>SD<b>Vendas</b></span></a>
+          <a href="/" class="brand brand--dark">${LOGO}<span><b>Vida</b></span></a>
           <div><h2>Bem-vindo de volta</h2><p class="sub">Acesse a área restrita para gerenciar o blog.</p></div>
           <div class="alert alert--err" id="loginErr" hidden></div>
           <label class="fld"><span>Login</span><input class="inp" name="email" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required></label>
@@ -164,7 +164,7 @@
     root.innerHTML = `
     <div class="app" id="app">
       <aside class="side">
-        <a href="#/" class="brand">${LOGO}<span>SD<b>Vendas</b></span></a>
+        <a href="#/" class="brand">${LOGO}<span><b>Vida</b></span></a>
         <nav class="side__nav">
           <a href="#/" class="${is('/')}">${I.grid}Visão geral</a>
           <div class="side__label">Blog</div>
@@ -453,7 +453,7 @@
     function updSeo() {
       counter($('#excerpt'), $('#exCount'), 400); counter($('#seoTitle'), $('#stCount'), 70); counter($('#seoDesc'), $('#sdCount'), 170);
       $('#spU').textContent = `${location.host} › blog › ${slug.value || 'artigo'}`;
-      $('#spT').textContent = ($('#seoTitle').value || title.value || 'Título do artigo') + ' | SD Vendas';
+      $('#spT').textContent = ($('#seoTitle').value || title.value || 'Título do artigo') + ' | Vida';
       $('#spD').textContent = $('#seoDesc').value || $('#excerpt').value || quill.getText().slice(0, 160) || 'Descrição do artigo...';
     }
     ['#excerpt', '#seoTitle', '#seoDesc', '#slug'].forEach((s) => $(s).addEventListener('input', updSeo));

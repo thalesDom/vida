@@ -5,7 +5,7 @@ const crypto = require('crypto');
 const config = require('./config');
 const db = require('./db');
 
-const COOKIE = 'sd_session';
+const COOKIE = 'vida_session';
 const MAX_AGE = 7 * 24 * 60 * 60 * 1000; // 7 dias
 
 const b64 = (buf) => Buffer.from(buf).toString('base64url');

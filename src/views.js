@@ -10,7 +10,7 @@ function header(active = '') {
   return `
 <header class="nav is-solid" id="nav">
   <div class="container nav__inner">
-    <a href="/" class="brand" aria-label="${e(config.siteName)} — início">${LOGO}<span>SD<b>Vendas</b></span></a>
+    <a href="/" class="brand" aria-label="${e(config.siteName)} — início">${LOGO}<span><b>Vida</b></span></a>
     <nav class="nav__links" id="navLinks" aria-label="Principal">
       <a href="/#features">Funcionalidades</a>
       <a href="/#how">Como funciona</a>
@@ -34,7 +34,7 @@ function footer() {
   <div class="container">
     <div class="footer__grid">
       <div class="footer__brand">
-        <a href="/" class="brand brand--light">${LOGO}<span>SD<b>Vendas</b></span></a>
+        <a href="/" class="brand brand--light">${LOGO}<span><b>Vida</b></span></a>
         <p>Inteligência comercial para laboratórios. Visitação médica e B2B que gera resultado.</p>
         <div class="socials">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -120,7 +120,7 @@ function blogIndex({ posts, categories, page, pages, category, q, total }) {
 <section class="blog-hero">
   <div class="blog-hero__bg" aria-hidden="true"></div>
   <div class="container">
-    <span class="eyebrow reveal">${category ? 'Categoria' : 'Blog SD Vendas'}</span>
+    <span class="eyebrow reveal">${category ? 'Categoria' : 'Blog Vida'}</span>
     <h1 class="reveal">${e(heading)}</h1>
     <p class="reveal">${e(category?.description || 'Estratégia comercial, visitação médica e inteligência de dados para laboratórios que querem crescer.')}</p>
     <form class="search reveal" action="${base}" role="search">
@@ -184,7 +184,7 @@ function blogPost({ post, related }) {
       <h1 class="reveal">${e(post.title)}</h1>
       <p class="article__lead reveal">${e(post.excerpt)}</p>
       <div class="article__meta reveal">
-        <span class="avatar">${e((post.author || 'SD').split(' ').map((w) => w[0]).slice(0, 2).join(''))}</span>
+        <span class="avatar">${e((post.author || 'Vida').split(' ').map((w) => w[0]).slice(0, 2).join(''))}</span>
         <div><strong>${e(post.author || config.siteName)}</strong><span>${formatDate(post.published_at)} · ${post.reading_time} min de leitura</span></div>
       </div>
     </div>

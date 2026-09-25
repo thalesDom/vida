@@ -1,4 +1,4 @@
-# SD Vendas — Site premium + Blog com área restrita
+# Vida — Site premium + Blog com área restrita
 
 Site institucional (verde e branco, responsivo e animado) com blog e painel administrativo para publicar artigos.
 

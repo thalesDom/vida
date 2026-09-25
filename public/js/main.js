@@ -1,4 +1,4 @@
-/* SD Vendas — interações do site público */
+/* Vida — interações do site público */
 (() => {
   'use strict';
   const $ = (s, c = document) => c.querySelector(s);
@@ -386,10 +386,10 @@
   }
 
   /* ---------- Consentimento de cookies (LGPD) ---------- */
-  // A escolha fica salva no navegador (localStorage + cookie "sd_consent", 180 dias).
-  // Outros scripts (ex.: Google Analytics) devem checar window.sdConsent.has('analytics')
-  // ou ouvir o evento "sd:consent" antes de carregar.
-  const CONSENT_KEY = 'sd_consent_v1';
+  // A escolha fica salva no navegador (localStorage + cookie "vida_consent", 180 dias).
+  // Outros scripts (ex.: Google Analytics) devem checar window.vidaConsent.has('analytics')
+  // ou ouvir o evento "vida:consent" antes de carregar.
+  const CONSENT_KEY = 'vida_consent_v1';
   const readConsent = () => {
     try { return JSON.parse(localStorage.getItem(CONSENT_KEY) || 'null'); } catch { return null; }
   };
@@ -410,11 +410,11 @@
     } catch { /* sem rede */ }
     try { localStorage.setItem(CONSENT_KEY, JSON.stringify(data)); } catch { /* modo privado */ }
     const val = ['necessary', data.analytics && 'analytics', data.marketing && 'marketing'].filter(Boolean).join('.');
-    document.cookie = `sd_consent=${val}; Max-Age=${60 * 60 * 24 * 180}; Path=/; SameSite=Lax`;
-    window.dispatchEvent(new CustomEvent('sd:consent', { detail: data }));
+    document.cookie = `vida_consent=${val}; Max-Age=${60 * 60 * 24 * 180}; Path=/; SameSite=Lax`;
+    window.dispatchEvent(new CustomEvent('vida:consent', { detail: data }));
     return data;
   };
-  window.sdConsent = { get: readConsent, has: (k) => k === 'necessary' || !!readConsent()?.[k] };
+  window.vidaConsent = { get: readConsent, has: (k) => k === 'necessary' || !!readConsent()?.[k] };
 
   const COOKIE_SVG = `<svg viewBox="0 0 48 48" aria-hidden="true"><path class="ck-body" d="M24 4a20 20 0 1019.6 16.2 5.5 5.5 0 01-6.9-5.4 5.5 5.5 0 01-6.8-6.9A20 20 0 0124 4z"/><circle class="ck-chip" cx="16" cy="18" r="2.6"/><circle class="ck-chip" cx="28" cy="27" r="3"/><circle class="ck-chip" cx="17" cy="31" r="2.2"/><circle class="ck-chip" cx="33" cy="36" r="1.8"/><circle class="ck-crumb" cx="40" cy="9" r="1.6"/><circle class="ck-crumb" cx="44" cy="14" r="1"/></svg>`;
 

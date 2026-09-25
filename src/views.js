@@ -17,10 +17,10 @@ function header(active = '') {
       <a href="/#reviews">Depoimentos</a>
       <a href="/blog" class="${active === 'blog' ? 'is-active' : ''}">Blog</a>
       <a href="/#contato">Contato</a>
-      <a href="${e(config.appUrl)}" class="btn btn--primary btn--sm nav__cta-mobile">Acessar painel</a>
+      <a href="/admin" class="btn btn--primary btn--sm nav__cta-mobile">Acessar painel</a>
     </nav>
     <div class="nav__actions">
-      <a href="${e(config.appUrl)}" class="btn btn--primary btn--sm">Acessar painel <span aria-hidden="true">→</span></a>
+      <a href="/admin" class="btn btn--primary btn--sm">Acessar painel <span aria-hidden="true">→</span></a>
       <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
     </div>
   </div>

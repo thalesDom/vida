@@ -33,7 +33,6 @@ module.exports = {
   siteName: process.env.SITE_NAME || 'Vida',
   whatsapp: process.env.WHATSAPP || '5500000000000',
   contactEmail: process.env.CONTACT_EMAIL || 'contato@vida.com.br',
-  appUrl: process.env.APP_URL || 'https://app.vida.com.br',
   dbFile: path.join(dataDir, 'site.db'),
   uploadsDir: path.join(root, 'uploads'),
   secret: getSecret(),

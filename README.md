@@ -19,7 +19,7 @@ Primeiro acesso: login `vida` / senha `Troque@123`. O painel pede para trocar a 
 
 ## Configuração (`.env`)
 
-Copie `.env.example` para `.env` e ajuste: WhatsApp, e-mail, domínio (`SITE_URL`), link do sistema (`APP_URL`) e o admin inicial.
+Copie `.env.example` para `.env` e ajuste: WhatsApp, e-mail, domínio (`SITE_URL`) e o admin inicial.
 O admin do `.env` só é criado no **primeiro** start, quando o banco ainda está vazio.
 
 ## O que tem no painel (/admin)

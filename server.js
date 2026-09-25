@@ -40,8 +40,7 @@ app.get(['/', '/index.html'], (req, res) => {
   if (!homeCache || !config.isProd) {
     homeCache = versioned(fs.readFileSync(homeFile, 'utf8')
       .replaceAll('5500000000000', config.whatsapp)
-      .replaceAll('contato@vida.com.br', config.contactEmail)
-      .replaceAll('https://app.vida.com.br', config.appUrl));
+      .replaceAll('contato@vida.com.br', config.contactEmail));
   }
   res.set('Cache-Control', 'no-cache').type('html').send(homeCache);
 });

@@ -288,4 +288,4 @@ function notFound() {
   });
 }
 
-module.exports = { blogIndex, blogPost, legalPage, notFound };
+module.exports = { layout, blogIndex, blogPost, legalPage, notFound };

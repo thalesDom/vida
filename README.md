@@ -63,6 +63,17 @@ uploads/            imagens enviadas pelo painel
 data/               banco de dados (FAÇA BACKUP desta pasta e da uploads/)
 ```
 
+## Prévia no GitHub Pages
+
+Versão estática em **https://thalesdom.github.io/vida/**, gerada a partir do conteúdo do banco local:
+
+```bash
+npm run build:pages   # gera a pasta docs/
+git add docs && git commit -m "Atualiza prévia" && git push
+```
+
+No Pages não há servidor: os formulários de contato e de depoimento abrem o WhatsApp, a busca do blog fica oculta e a área restrita mostra um aviso. Para ter o painel funcionando, use a hospedagem abaixo.
+
 ## Publicar (hospedagem)
 
 Precisa de hospedagem com **Node.js**: VPS (Hostinger VPS, DigitalOcean, Contabo), Render, Railway ou um cPanel com "Setup Node.js App".

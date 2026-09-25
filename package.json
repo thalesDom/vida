@@ -6,7 +6,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node --disable-warning=ExperimentalWarning server.js",
-    "dev": "node --disable-warning=ExperimentalWarning --watch server.js"
+    "dev": "node --disable-warning=ExperimentalWarning --watch server.js",
+    "build:pages": "node --disable-warning=ExperimentalWarning scripts/build-static.js"
   },
   "engines": {
     "node": ">=22.5"

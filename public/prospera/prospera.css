@@ -453,3 +453,17 @@ html { scrollbar-color: #bf9a58 #efe7da; scrollbar-width: thin; }
 ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #d9bd84, #bf9a58 50%, #9c7a3c); border-radius: 999px; border: 3px solid #efe7da; }
 ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #c9a765, #9c7a3c); }
 ::-webkit-scrollbar-corner { background: #efe7da; }
+
+/* Celular/tablet: foto da abertura entre os botões e os números
+   (no computador nada muda) */
+@media (max-width: 1100px) {
+  .hero__grid { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0; }
+  .hero__copy { display: contents; }
+  .hero__ctas { order: 5; }
+  .hero__visual { order: 6; margin: 64px auto 0; }
+  .hero__proof { order: 7; margin-top: 56px; }
+}
+@media (max-width: 600px) {
+  .hero__visual { margin-top: 52px; }
+  .hero__proof { margin-top: 44px; }
+}

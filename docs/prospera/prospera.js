@@ -40,6 +40,21 @@
     nav.classList.remove('is-open'); burger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = '';
   }));
 
+  /* Voltar ao topo: aparece ao rolar e mostra o progresso da página */
+  const top = $('#toTop'), prog = $('#toTopProg');
+  if (top) {
+    const C = 2 * Math.PI * 24;
+    prog.style.strokeDasharray = C;
+    const upd = () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      const k = max > 0 ? scrollY / max : 0;
+      prog.style.strokeDashoffset = C * (1 - k);
+      top.classList.toggle('is-visible', scrollY > innerHeight * .6);
+    };
+    addEventListener('scroll', upd, { passive: true }); upd();
+    top.addEventListener('click', () => scrollTo({ top: 0, behavior: reduced ? 'auto' : 'smooth' }));
+  }
+
   /* Revelar ao rolar, em cascata */
   const io = new IntersectionObserver((entries) => entries.forEach((e) => {
     if (!e.isIntersecting) return;

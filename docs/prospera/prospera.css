@@ -489,3 +489,29 @@ ol { margin: 0; padding: 0; list-style: none; }
   .step { column-gap: 30px; }
   .step::before { left: 82px; }
 }
+
+/* Botão voltar ao topo (canto inferior esquerdo) */
+.to-top { position: fixed; left: 26px; bottom: 26px; z-index: 90; width: 54px; height: 54px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+  background: rgba(251,248,243,.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); box-shadow: 0 16px 32px -14px rgba(31,42,29,.45);
+  opacity: 0; transform: translateY(16px) scale(.9); pointer-events: none; transition: opacity .5s var(--ease), transform .6s var(--ease), box-shadow .4s; }
+.to-top.is-visible { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { box-shadow: 0 20px 36px -14px rgba(31,42,29,.55); }
+.to-top__ring { position: absolute; inset: 0; width: 100%; height: 100%; transform: rotate(-90deg); }
+.to-top__ring circle { fill: none; stroke: rgba(191,154,88,.22); stroke-width: 1.6; }
+.to-top__ring .to-top__prog { stroke: var(--gold); stroke-linecap: round; transition: stroke-dashoffset .15s linear; }
+.to-top__arrow { position: relative; width: 20px; height: 20px; fill: none; stroke: var(--gold-3); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; transition: transform .5s var(--ease); }
+.to-top:hover .to-top__arrow { transform: translateY(-3px); }
+@media (max-width: 600px) { .to-top { left: 14px; bottom: 14px; width: 50px; height: 50px; } }
+
+/* Preloader delicado (creme + fio dourado) */
+.pre { background: radial-gradient(circle at 50% 46%, #fdfbf7 0%, var(--cream) 62%, #efe7da 100%); clip-path: none !important; transition: opacity 1.1s var(--ease), visibility 1.1s; }
+.pre.is-done { opacity: 0; visibility: hidden; }
+.pre__in { gap: 20px; transition: transform 1.2s var(--ease), opacity .9s var(--ease); }
+.pre.is-done .pre__in { transform: scale(1.04) translateY(-6px); opacity: 0; }
+.pre__mono { width: 88px; }
+.pre__ring { stroke: var(--gold); stroke-width: .6; animation: draw 1.8s var(--ease) forwards; }
+.pre__cp { font-size: 34px; font-weight: 400; fill: var(--gold-3); animation: fadeIn 1.2s .6s forwards; }
+.pre__mono::after { content: none; }
+.pre__label { font-family: var(--serif); font-size: 19px; font-style: italic; letter-spacing: .04em; text-transform: none; color: var(--sage-700); animation: fadeIn 1.2s .9s forwards; }
+.pre__bar { width: 90px; height: 1px; background: rgba(191,154,88,.18); opacity: 0; animation: fadeIn .8s 1.1s forwards; }
+.pre__bar i { background: linear-gradient(90deg, var(--gold-2), var(--gold)); }

@@ -1,37 +1,30 @@
 # Método Prospera — Carol Pessoa
 
-Site institucional da consultoria **Método Prospera**: estratégia clínica e resultado para negócios da saúde.
+Site da consultoria **Método Prospera**: estratégia clínica e resultado para negócios da saúde.
 
 **No ar:** https://thalesdom.github.io/vida/
 
-## Estrutura
+## Arquivos
 
 ```
-public/
-  index.html            página do site
-  prospera/
-    prospera.css        estilos (creme, verde-sálvia, dourado, rosé)
-    prospera.js         animações e interações
-    img/                fotos da Carol
-docs/                   cópia publicada no GitHub Pages (gerada)
-server.js               servidor local para visualizar o site
+index.html      página do site
+css/style.css   visual (creme, verde-sálvia, dourado, rosé)
+js/script.js    animações e interações
+img/            fotos da Carol e ícone do site
 ```
 
 ## Ver no computador
 
-```bash
-npm install
-npm start          # http://localhost:3000
-```
+Abra o `index.html` no navegador (duplo clique).
 
-## Atualizar o site publicado
+## Atualizar o site no ar
+
+Edite os arquivos e envie para o GitHub — o GitHub Pages publica sozinho em 1 a 2 minutos:
 
 ```bash
-npm run build:pages
 git add -A && git commit -m "Atualiza site" && git push
 ```
 
 ## WhatsApp
 
-Os botões usam o número provisório `5500000000000`. Para trocar, substitua esse número em `public/index.html`
-(ou gere a versão publicada com `WHATSAPP=55DDDNUMERO npm run build:pages`).
+Os botões usam o número provisório `5500000000000`. Para trocar, substitua esse número no `index.html`.

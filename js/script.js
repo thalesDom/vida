@@ -6,6 +6,18 @@
   const root = document.documentElement;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* WhatsApp: todos os botões de contato abrem a conversa com uma triagem breve.
+     Para trocar o número, altere só a linha abaixo (DDI + DDD + número, só dígitos). */
+  const WHATSAPP = '5500000000000';
+  const WA_MSG = [
+    'Olá, Carol! Gostaria de agendar uma conversa sobre a consultoria.',
+    '',
+    'Nome:',
+    'Tipo de negócio (clínica, consultório ou laboratório):',
+    'Principal objetivo:',
+  ].join('\n');
+  $$('[data-wa]').forEach((a) => { a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WA_MSG)}`; });
+
   /* Preloader */
   const pre = $('#pre'), bar = $('#preBar'), t0 = performance.now();
   let loaded = document.readyState === 'complete';

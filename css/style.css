@@ -533,3 +533,24 @@ ol { margin: 0; padding: 0; list-style: none; }
   .invite { padding: 36px 20px 26px; }
   .invite__title { font-size: 34px; }
 }
+
+
+/* Contato por e-mail (opção secundária ao WhatsApp) */
+.alt-contact { text-align: center; font-size: 13.5px; color: var(--muted); margin-top: -2px; }
+.alt-contact__link { color: var(--gold-3); font-weight: 600; border-bottom: 1px solid rgba(191,154,88,.45); transition: color .3s, border-color .3s; word-break: break-all; }
+.alt-contact__link:hover { color: var(--sage-900); border-color: var(--sage-900); }
+.final__ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 22px 30px; }
+.mail-link { display: inline-flex; align-items: center; gap: 14px; color: var(--sage-800); transition: color .3s; }
+.mail-link svg, .foot__mail svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.mail-link svg { width: 46px; height: 46px; padding: 12px; border-radius: 50%; color: var(--gold-3); box-shadow: inset 0 0 0 1px rgba(191,154,88,.5); transition: background .4s, color .4s; }
+.mail-link:hover svg { background: var(--sage-800); color: var(--gold-2); }
+.mail-link span { display: grid; font-size: 14.5px; font-weight: 600; line-height: 1.35; }
+.mail-link small { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+.foot__mail { grid-column: 1 / -1; }
+.foot__mail a { display: inline-flex; align-items: center; gap: 10px; color: rgba(246,240,228,.8); transition: color .3s; }
+.foot__mail a:hover { color: var(--gold-2); }
+@media (max-width: 1100px) { .final__ctas { justify-content: center; } }
+@media (max-width: 600px) {
+  .final__ctas { flex-direction: column; gap: 22px; }
+  .mail-link span { font-size: 13.5px; text-align: left; }
+}

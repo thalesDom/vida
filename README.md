@@ -25,6 +25,7 @@ Edite os arquivos e envie para o GitHub — o GitHub Pages publica sozinho em 1 
 git add -A && git commit -m "Atualiza site" && git push
 ```
 
-## WhatsApp
+## Contato
 
-Os botões usam o número provisório `5500000000000`. Para trocar, substitua esse número no `index.html`.
+- **WhatsApp:** os botões usam o número provisório `5500000000000`. Para trocar, altere `WHATSAPP` no início do `js/script.js`.
+- **E-mail:** prosperacomcarol@gmail.com (constante `EMAIL` no `js/script.js`).

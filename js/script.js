@@ -16,6 +16,9 @@
     'Tipo de negócio (clínica, consultório ou laboratório):',
     'Principal objetivo:',
   ].join('\n');
+  const EMAIL = 'prosperacomcarol@gmail.com';
+  const MAIL_SUBJECT = 'Agendar uma conversa — Método Prospera';
+  $$('[data-mail]').forEach((a) => { a.href = `mailto:${EMAIL}?subject=${encodeURIComponent(MAIL_SUBJECT)}&body=${encodeURIComponent(WA_MSG)}`; });
   $$('[data-wa]').forEach((a) => { a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WA_MSG)}`; });
 
   /* Preloader */

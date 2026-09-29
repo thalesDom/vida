@@ -18,7 +18,26 @@
   ].join('\n');
   const EMAIL = 'prosperacomcarol@gmail.com';
   const MAIL_SUBJECT = 'Agendar uma conversa — Método Prospera';
-  $$('[data-mail]').forEach((a) => { a.href = `mailto:${EMAIL}?subject=${encodeURIComponent(MAIL_SUBJECT)}&body=${encodeURIComponent(WA_MSG)}`; });
+  /* E-mail: no celular abre o app de e-mail; no computador (onde muitas vezes não há
+     programa de e-mail configurado) abre o Gmail com a mensagem pronta e copia o endereço. */
+  const enc = encodeURIComponent;
+  const GMAIL = `https://mail.google.com/mail/?view=cm&fs=1&to=${EMAIL}&su=${enc(MAIL_SUBJECT)}&body=${enc(WA_MSG)}`;
+  const desktop = matchMedia('(hover: hover) and (pointer: fine)').matches;
+  $$('[data-mail]').forEach((a) => {
+    a.href = `mailto:${EMAIL}?subject=${enc(MAIL_SUBJECT)}&body=${enc(WA_MSG)}`;
+    if (!desktop) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      open(GMAIL, '_blank', 'noopener');
+      try { navigator.clipboard.writeText(EMAIL).then(() => toast(`E-mail copiado: ${EMAIL}`), () => {}); } catch (err) {}
+    });
+  });
+  function toast(msg) {
+    let t = $('#toast');
+    if (!t) { t = document.createElement('div'); t.id = 'toast'; t.className = 'toast'; t.setAttribute('role', 'status'); document.body.appendChild(t); }
+    t.textContent = msg; t.classList.add('is-on');
+    clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('is-on'), 2600);
+  }
   /* Instagram: coloque o @ sem a arroba (ex.: 'prosperacomcarol'). Vazio = link genérico. */
   const INSTAGRAM = '';
   if (INSTAGRAM) {

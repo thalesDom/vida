@@ -19,6 +19,12 @@
   const EMAIL = 'prosperacomcarol@gmail.com';
   const MAIL_SUBJECT = 'Agendar uma conversa — Método Prospera';
   $$('[data-mail]').forEach((a) => { a.href = `mailto:${EMAIL}?subject=${encodeURIComponent(MAIL_SUBJECT)}&body=${encodeURIComponent(WA_MSG)}`; });
+  /* Instagram: coloque o @ sem a arroba (ex.: 'prosperacomcarol'). Vazio = link genérico. */
+  const INSTAGRAM = '';
+  if (INSTAGRAM) {
+    $$('[data-ig]').forEach((a) => { a.href = `https://www.instagram.com/${INSTAGRAM}/`; });
+    $$('[data-ig-handle]').forEach((el) => { el.textContent = '@' + INSTAGRAM; });
+  }
   $$('[data-wa]').forEach((a) => { a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WA_MSG)}`; });
 
   /* Preloader */

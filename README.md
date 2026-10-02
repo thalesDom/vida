@@ -27,5 +27,5 @@ git add -A && git commit -m "Atualiza site" && git push
 
 ## Contato
 
-- **WhatsApp:** os botões usam o número provisório `5500000000000`. Para trocar, altere `WHATSAPP` no início do `js/script.js`.
+- **WhatsApp e telefone:** (77) 99956-8550 (constante `WHATSAPP` no início do `js/script.js`).
 - **E-mail:** prosperacomcarol@gmail.com (constante `EMAIL` no `js/script.js`).

@@ -8,7 +8,7 @@
 
   /* WhatsApp: todos os botões de contato abrem a conversa com uma triagem breve.
      Para trocar o número, altere só a linha abaixo (DDI + DDD + número, só dígitos). */
-  const WHATSAPP = '5500000000000';
+  const WHATSAPP = '5577999568550';
   const WA_MSG = [
     'Olá, Carol! Gostaria de agendar uma conversa sobre a consultoria.',
     '',
@@ -44,6 +44,16 @@
     $$('[data-ig]').forEach((a) => { a.href = `https://www.instagram.com/${INSTAGRAM}/`; });
     $$('[data-ig-handle]').forEach((el) => { el.textContent = '@' + INSTAGRAM; });
   }
+  /* Telefone: no celular liga; no computador copia o número */
+  const PHONE = '(77) 99956-8550';
+  $$('[data-tel]').forEach((a) => {
+    a.href = `tel:+${WHATSAPP}`;
+    if (!desktop) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      try { navigator.clipboard.writeText(PHONE).then(() => toast(`Telefone copiado: ${PHONE}`), () => toast(`Telefone: ${PHONE}`)); } catch (err) { toast(`Telefone: ${PHONE}`); }
+    });
+  });
   $$('[data-wa]').forEach((a) => { a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(WA_MSG)}`; });
 
   /* Preloader */
